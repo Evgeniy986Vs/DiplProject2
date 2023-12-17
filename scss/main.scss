@@ -15,3 +15,16 @@ a {
     width: 1200px;
     margin: 0 auto;
 }
+
+@media screen and ( max-widht: 1279px ) and( min-widht:768px ) {
+    .container {
+        width: 90vw;
+    }
+}
+
+@media screen and (max-widht: 767px) {
+    .container {
+        width: auto;
+        margin: 0 15px;
+    }
+}

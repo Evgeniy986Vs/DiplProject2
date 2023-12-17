@@ -5,17 +5,19 @@
     &__title {
         font-weight: bold;
         font-size: 72px;
+        line-height: 140%;
         max-width: 760px;
         color: $Grayscale50;
         margin-bottom: 50px;
         &::after {
             position: relative;
-            content: '';
+            content: " ";
             top: 150PX;
             right: 0;
             width: 400px;
             height: 2px;
             background: #000;
+            margin-bottom: 100px;
         }
         &__smaller {
             font-size: 52px;
@@ -30,7 +32,7 @@
         position: absolute;
         right: 140px;
         top: 240px;
-        background:  #2C3878;
+        background: $PrimaryBlue100;
         width: 252px;
         display: flex;
         flex-direction: column;
@@ -38,7 +40,7 @@
         justify-content: space-around;
         padding-top: 30px;
         &__item {
-            padding: 40px 0;
+            padding: 40px 0;   
             span {
                 display: block;
                 color: #fff;
@@ -50,6 +52,107 @@
             strong {
                 font-size: 48px;
             }
+        }
+    }
+}
+
+.hero-nav {
+    display: none;
+}
+
+@media screen and (max-widht: 1279px) and (min-widht: 768px) {
+     .hero {
+        &__image {
+            height: 400px;
+        }
+        &__title {
+            font-size: 40px;
+            max-width: 400px;
+            color: $Grayscale50;
+            margin-bottom: 40px;
+            &::after {
+                top: 330px;
+                right: 0;
+                width: 30vw;
+            }
+            &_smaller {
+                font-size: 32px;
+            }
+        }
+        &__parametrs {
+            position: static;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            &:not(.hero__parametrs_large) {
+              position: absolute;
+              top: auto;
+              right: 0;
+              height: 160px;
+              width: 240px;
+            }
+            &__item {
+                padding: 30px 0;
+                strong {
+                    font-size: 40px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-widht: 767px) {
+    .hero {
+        padding: 50px 0;
+        &__image {
+            height: 200px;
+        }
+        &__title {
+            font-size: 24px;
+            max-width: 100%;
+            margin-bottom: 20px;
+            &::after {
+                width: 0;
+            }
+            &_smaller {
+                font-size: 24px;
+            }
+        }
+        &__parametrs {
+            position: static;
+            width: 100%;
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding-top: 15px;
+            &:not(.hero__parametrs_large) {
+                position: absolute;
+                top: auto;
+                right: 0;
+                height: 90px;
+                width: 150px;
+            }
+            &__item {
+                padding: 20px 0;
+                span {
+                    font-size: 10px;
+                    padding-bottom: 5px;
+                }
+                strong {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+    .hero-nav {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        .nav__item {
+            font-size: 14px;
+            text-align: center;
+            flex: 1;
+            display: block;
+            margin: 15px 5px;
         }
     }
 }
